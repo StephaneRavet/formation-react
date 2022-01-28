@@ -1,11 +1,14 @@
-import propTypes from 'prop-types';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { Context } from '../context';
 import logo from '../logo.svg';
 
-function Header(props) {
+function Header() {
 
-    const loggedUser = props.user
-        ? <div>Bienvenue {props.user} !</div>
+    const {context} = useContext(Context)
+
+    const loggedUser = context.user
+        ? <div>Bienvenue {context.user} !</div>
         : <div>Connectez-vous !</div>
 
     return (
@@ -40,10 +43,6 @@ function Header(props) {
             </nav>
         </>
     );
-}
-
-Header.propTypes = {
-    user: propTypes.string
 }
 
 export default Header;
