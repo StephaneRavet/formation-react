@@ -33,6 +33,7 @@ function Contact(props) {
                 <div className="mb-3">
                     <label htmlFor="country" className="form-label">Pays</label>
                     <select
+                        data-testid='trucbidule'
                         className="form-select"
                         id="country"
                         onChange={handleCountry}

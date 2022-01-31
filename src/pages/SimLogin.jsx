@@ -49,6 +49,7 @@ function SimLogin() {
                         placeholder="Identifiant"
                         type="text"
                         className="form-control"
+                        data-cy="login"
                     />
                 </div>
                 <div className='mb-3'>
@@ -63,9 +64,10 @@ function SimLogin() {
                         placeholder="Mot de passe"
                         type="password"
                         className="form-control"
+                        data-cy="password"
                     />
                 </div>
-                <button type="submit" className="btn btn-primary">Connexion</button>
+                <button type="submit" className="btn btn-primary" data-cy='submit'>Connexion</button>
             </Form>}
         </Formik>
     );
